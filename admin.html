@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin | Cats Crochet</title>
+    <meta name="description" content="Manage Loop & Little crochet shop products.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="admin-page">
+    <header class="site-header" aria-label="Admin navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>Cats Crochet</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Storefront</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main class="admin-login-shell" id="loginView">
+      <section class="login-card" aria-labelledby="loginTitle">
+        <p class="eyebrow">Private area</p>
+        <h1 id="loginTitle">Admin Login</h1>
+        <p>Enter the admin password to manage products, prices, and sale details.</p>
+        <form id="loginForm" class="login-form">
+          <label>
+            Admin password
+            <input name="password" id="adminPassword" type="password" autocomplete="current-password" required>
+          </label>
+          <button class="button primary full" type="submit">Unlock Admin</button>
+          <p class="login-error" id="loginError" role="alert"></p>
+        </form>
+      </section>
+    </main>
+
+    <main class="admin-shell locked" id="adminView">
+      <section class="admin-hero" aria-labelledby="adminTitle">
+        <div>
+          <p class="eyebrow">Shop manager</p>
+          <h1 id="adminTitle">Product Admin</h1>
+          <p>Add products, update prices, mark offers, and remove sold-out items. Changes save in this browser and appear on the storefront.</p>
+        </div>
+        <div class="admin-actions">
+          <a class="button secondary dark" href="index.html">View Storefront</a>
+          <button class="button secondary dark" type="button" id="logoutAdmin">Log Out</button>
+          <button class="button danger" type="button" id="resetProducts">Reset Sample Items</button>
+        </div>
+      </section>
+
+      <section class="admin-grid" aria-label="Product management">
+        <form class="admin-form" id="productForm">
+          <input type="hidden" name="id" id="productId">
+          <h2 id="formTitle">Add Product</h2>
+
+          <label>
+            Product name
+            <input name="name" id="name" required>
+          </label>
+
+          <div class="form-row">
+            <label>
+              Price
+              <input name="price" id="price" type="number" min="0" step="1" required>
+            </label>
+            <label>
+              Original price
+              <input name="originalPrice" id="originalPrice" type="number" min="0" step="1" placeholder="Optional">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Category
+              <select name="category" id="category" required>
+                <option value="amigurumi">Amigurumi(Plushies)</option>
+                <option value="accessories">Accessories</option>
+                <option value="decor">Decor</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <input name="status" id="status" placeholder="In stock, Made to order">
+            </label>
+          </div>
+
+          <label>
+            Sale or offer label
+            <input name="offer" id="offer" placeholder="Summer sale, 10% off, Best seller">
+          </label>
+
+          <label>
+            Image path or URL
+            <input name="image" id="image" placeholder="assets/product-plush.svg">
+          </label>
+
+          <label>
+            Description
+            <textarea name="description" id="description" rows="4" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="button primary" type="submit">Save Product</button>
+            <button class="button secondary dark" type="button" id="clearForm">Clear</button>
+          </div>
+        </form>
+
+        <section class="admin-list" aria-labelledby="inventoryTitle">
+          <div class="admin-list-heading">
+            <div>
+              <p class="eyebrow">Inventory</p>
+              <h2 id="inventoryTitle">Current Products</h2>
+            </div>
+            <span id="productCount" class="count-pill">0 items</span>
+          </div>
+          <div id="adminProducts"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

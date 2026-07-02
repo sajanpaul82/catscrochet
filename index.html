@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cats Crochet | Handmade Crochet Shop</title>
+    <meta name="description" content="A parent-managed handmade crochet shop for plushies, totes, flowers, and custom gifts.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Cats Crochet home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Cats Crochet</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#custom">Custom Orders</a>
+        <a href="#care">Care</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <button class="cart-toggle" type="button" aria-label="Open cart">
+        <span aria-hidden="true">Bag</span>
+        <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-content">
+          <p class="eyebrow">Parent-managed crochet studio</p>
+          <h1 id="heroTitle">Cat's Crochet</h1>
+           <p class="hero-copy">Turning yarn into magic. Crafted with love and care.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#shop">Shop</a>
+            <a class="button secondary" href="#custom">Request Custom</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="notice" aria-label="Shop notice">
+        <p>Orders and messages are handled by a parent or guardian. No personal details from the young maker are shared on this site.</p>
+      </section>
+
+      <section class="section intro" aria-labelledby="introTitle">
+        <div>
+          <p class="eyebrow">Small batches, made slowly</p>
+          <h2 id="introTitle">A cheerful storefront for handmade pieces.</h2>
+        </div>
+        <p>Hello Welcome to my page! I love making crochet things and wanted to share them with you!</p>
+      </section>
+
+      <section class="section shop" id="shop" aria-labelledby="shopTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Ready to love</p>
+            <h2 id="shopTitle">Featured Crochet</h2>
+          </div>
+          <div class="filters" aria-label="Product filters">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="amigurumi">Amigurumi(Plushies)</button>
+            <button class="filter" type="button" data-filter="accessories">Accessories</button>
+            <button class="filter" type="button" data-filter="decor">Decor</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section custom" id="custom" aria-labelledby="customTitle">
+        <div class="custom-copy">
+          <p class="eyebrow">Made for someone specific</p>
+          <h2 id="customTitle">Custom colorways, gift sets, and tiny plush ideas.</h2>
+		  <p> <p>
+          <p>Share the item type, colors, deadline, and any inspiration. A parent will reply with availability, timing, and a quote before any payment is requested.</p>
+        </div>
+        <form id="customForm" class="custom-form">
+          <label>
+            Your name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            What would you like?
+            <select name="type" required>
+              <option value="">Choose one</option>
+              <option>Plushie</option>
+              <option>Bag or accessory</option>
+              <option>Home item</option>
+              <option>Gift set</option>
+            </select>
+          </label>
+          <label>
+            Details
+            <textarea name="details" rows="5" placeholder="Colors, size, occasion, and ideal date"></textarea>
+          </label>
+          <button class="button primary" type="submit">Draft Request Email</button>
+        </form>
+      </section>
+
+      <section class="section details" id="care" aria-labelledby="careTitle">
+        <div>
+          <p class="eyebrow">Good to know</p>
+          <h2 id="careTitle">Care, timing, and safety notes.</h2>
+        </div>
+        <div class="detail-list">
+          <article>
+            <h3>Care</h3>
+            <p>Most pieces prefer spot cleaning or gentle hand washing, then air drying flat to keep their shape.</p>
+          </article>
+          <article>
+            <h3>Timing</h3>
+            <p>Ready-made items can ship faster. Custom work depends on yarn availability and school-year schedules.</p>
+          </article>
+          <article>
+            <h3>Safety</h3>
+            <p>Small parts like safety eyes are not recommended for children under three. Ask for embroidered features when needed.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping bag" aria-hidden="true">
+      <div class="cart-header">
+        <h2>Your Bag</h2>
+        <button class="icon-button" type="button" id="closeCart" aria-label="Close cart">x</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <button class="button primary full" type="button" id="checkoutButton">Draft Checkout Email</button>
+        <p>Checkout is parent-managed. Connect Stripe, Shopify, Square, or PayPal when you are ready for live payments.</p>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <footer class="footer">
+      <p>Cats Crochet</p>
+      <a href="mailto:sajanpaul@gmail.com">sajanpaul@gmail.com</a>
+      <p>Parent-managed handmade shop</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

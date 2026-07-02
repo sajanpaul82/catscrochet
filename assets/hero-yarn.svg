@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Colorful yarn and crochet hooks arranged on a work table">
+  <defs>
+    <linearGradient id="table" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7e7cf"/>
+      <stop offset=".52" stop-color="#d9b990"/>
+      <stop offset="1" stop-color="#8f755f"/>
+    </linearGradient>
+    <radialGradient id="cream" cx=".4" cy=".36" r=".65">
+      <stop offset="0" stop-color="#fff8ea"/>
+      <stop offset=".62" stop-color="#e9cfaa"/>
+      <stop offset="1" stop-color="#b68d62"/>
+    </radialGradient>
+    <radialGradient id="coral" cx=".4" cy=".36" r=".65">
+      <stop offset="0" stop-color="#ffd8cc"/>
+      <stop offset=".66" stop-color="#e87765"/>
+      <stop offset="1" stop-color="#9e3f44"/>
+    </radialGradient>
+    <radialGradient id="teal" cx=".4" cy=".36" r=".65">
+      <stop offset="0" stop-color="#ccefeb"/>
+      <stop offset=".68" stop-color="#308f8d"/>
+      <stop offset="1" stop-color="#1e4f5e"/>
+    </radialGradient>
+    <radialGradient id="gold" cx=".4" cy=".36" r=".65">
+      <stop offset="0" stop-color="#ffe9a6"/>
+      <stop offset=".65" stop-color="#e2a33b"/>
+      <stop offset="1" stop-color="#8f5f1f"/>
+    </radialGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#533a2b" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#table)"/>
+  <path d="M0 704c245-88 460-94 682-27 264 80 528 48 918-81v304H0z" fill="#b88467" opacity=".38"/>
+  <g opacity=".3" stroke="#795a45" stroke-width="3">
+    <path d="M0 194c255-38 526-35 814 9 277 42 539 37 786-17"/>
+    <path d="M0 304c289-44 549-39 780 14 306 70 579 50 820-27"/>
+    <path d="M0 430c223-19 457 7 704 78 302 86 601 59 896-81"/>
+    <path d="M0 606c232-76 493-76 785 0 249 65 521 56 815-28"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <g transform="translate(1030 142) rotate(-11)">
+      <ellipse cx="182" cy="183" rx="182" ry="156" fill="url(#teal)"/>
+      <g fill="none" stroke="#d7fffb" stroke-width="17" stroke-linecap="round" opacity=".8">
+        <path d="M72 116c79-50 183-51 253-2"/>
+        <path d="M43 172c82-69 226-73 305-1"/>
+        <path d="M55 234c73-45 201-47 277-3"/>
+        <path d="M129 55c-48 80-51 185-7 262"/>
+        <path d="M205 39c-53 98-50 219 9 295"/>
+        <path d="M276 75c-49 70-51 164-7 229"/>
+      </g>
+    </g>
+    <g transform="translate(1130 505) rotate(13)">
+      <ellipse cx="168" cy="154" rx="168" ry="145" fill="url(#gold)"/>
+      <g fill="none" stroke="#fff2c0" stroke-width="16" stroke-linecap="round" opacity=".86">
+        <path d="M57 94c76-43 167-43 229 0"/>
+        <path d="M34 151c78-61 207-63 271-2"/>
+        <path d="M61 208c68-37 165-38 224-2"/>
+        <path d="M115 38c-40 71-42 161-4 230"/>
+        <path d="M184 30c-45 88-43 190 7 254"/>
+        <path d="M250 64c-40 63-41 138-4 190"/>
+      </g>
+    </g>
+    <g transform="translate(770 390) rotate(-4)">
+      <ellipse cx="177" cy="169" rx="177" ry="150" fill="url(#coral)"/>
+      <g fill="none" stroke="#ffe0da" stroke-width="17" stroke-linecap="round" opacity=".82">
+        <path d="M66 104c80-48 181-47 247 0"/>
+        <path d="M40 162c82-65 220-67 296-2"/>
+        <path d="M63 222c74-42 188-42 251-2"/>
+        <path d="M124 47c-43 77-45 174-4 248"/>
+        <path d="M199 36c-49 92-46 205 8 273"/>
+        <path d="M270 70c-43 67-44 154-5 214"/>
+      </g>
+    </g>
+    <g transform="translate(570 92) rotate(10)">
+      <ellipse cx="164" cy="153" rx="164" ry="140" fill="url(#cream)"/>
+      <g fill="none" stroke="#fff6df" stroke-width="15" stroke-linecap="round" opacity=".84">
+        <path d="M56 90c74-42 164-42 226 0"/>
+        <path d="M34 147c76-59 203-61 267-2"/>
+        <path d="M58 204c66-37 162-37 222-2"/>
+        <path d="M113 38c-39 68-41 155-4 221"/>
+        <path d="M180 29c-43 85-42 181 7 243"/>
+        <path d="M246 61c-38 58-39 133-4 184"/>
+      </g>
+    </g>
+  </g>
+  <g filter="url(#softShadow)" stroke-linecap="round">
+    <path d="M806 120 1292 773" stroke="#754f3d" stroke-width="24"/>
+    <path d="M825 105c-20 10-28 35-18 55 10 20 35 28 55 18" fill="none" stroke="#754f3d" stroke-width="24"/>
+    <path d="M874 99 1360 752" stroke="#d9b45f" stroke-width="18"/>
+    <path d="M889 84c-16 9-23 29-14 46 9 16 29 23 46 14" fill="none" stroke="#d9b45f" stroke-width="18"/>
+  </g>
+  <path d="M0 0h1600v900H0z" fill="#2d221e" opacity=".24"/>
+  <path d="M0 0h780v900H0z" fill="#1b1715" opacity=".34"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Crocheted flower bouquet">
+  <rect width="900" height="700" rx="38" fill="#f4efe8"/>
+  <ellipse cx="452" cy="586" rx="246" ry="43" fill="#695548" opacity=".18"/>
+  <g stroke="#49775d" stroke-width="16" stroke-linecap="round">
+    <path d="M449 545 330 279"/>
+    <path d="M449 545 429 222"/>
+    <path d="M449 545 548 264"/>
+    <path d="M449 545 622 326"/>
+    <path d="M449 545 280 372"/>
+  </g>
+  <g fill="#77a884">
+    <ellipse cx="368" cy="369" rx="30" ry="64" transform="rotate(-52 368 369)"/>
+    <ellipse cx="497" cy="352" rx="28" ry="61" transform="rotate(41 497 352)"/>
+    <ellipse cx="548" cy="438" rx="28" ry="61" transform="rotate(-43 548 438)"/>
+  </g>
+  <g>
+    <g transform="translate(253 205)">
+      <circle cx="76" cy="76" r="55" fill="#e36f65"/>
+      <g fill="#ffc7c1">
+        <circle cx="76" cy="24" r="28"/><circle cx="122" cy="50" r="28"/><circle cx="122" cy="103" r="28"/><circle cx="76" cy="130" r="28"/><circle cx="30" cy="103" r="28"/><circle cx="30" cy="50" r="28"/>
+      </g>
+      <circle cx="76" cy="76" r="28" fill="#e5a93d"/>
+    </g>
+    <g transform="translate(361 142)">
+      <circle cx="76" cy="76" r="55" fill="#3a9a98"/>
+      <g fill="#c9eee9">
+        <circle cx="76" cy="24" r="28"/><circle cx="122" cy="50" r="28"/><circle cx="122" cy="103" r="28"/><circle cx="76" cy="130" r="28"/><circle cx="30" cy="103" r="28"/><circle cx="30" cy="50" r="28"/>
+      </g>
+      <circle cx="76" cy="76" r="28" fill="#f0be56"/>
+    </g>
+    <g transform="translate(484 198)">
+      <circle cx="76" cy="76" r="55" fill="#d9a441"/>
+      <g fill="#ffe3a0">
+        <circle cx="76" cy="24" r="28"/><circle cx="122" cy="50" r="28"/><circle cx="122" cy="103" r="28"/><circle cx="76" cy="130" r="28"/><circle cx="30" cy="103" r="28"/><circle cx="30" cy="50" r="28"/>
+      </g>
+      <circle cx="76" cy="76" r="28" fill="#b45f4b"/>
+    </g>
+    <g transform="translate(560 259)">
+      <circle cx="76" cy="76" r="55" fill="#9f6da7"/>
+      <g fill="#e3c7e8">
+        <circle cx="76" cy="24" r="28"/><circle cx="122" cy="50" r="28"/><circle cx="122" cy="103" r="28"/><circle cx="76" cy="130" r="28"/><circle cx="30" cy="103" r="28"/><circle cx="30" cy="50" r="28"/>
+      </g>
+      <circle cx="76" cy="76" r="28" fill="#f0be56"/>
+    </g>
+  </g>
+  <path d="M326 480h251l-47 109H373z" fill="#d6a77b" stroke="#96694b" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M348 507h207" stroke="#f7d6ad" stroke-width="13" stroke-linecap="round"/>
+</svg>

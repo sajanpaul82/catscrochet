@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="Set of crocheted flower coasters">
+  <rect width="900" height="700" rx="38" fill="#eef4e6"/>
+  <ellipse cx="451" cy="581" rx="282" ry="46" fill="#6a6a52" opacity=".16"/>
+  <g transform="translate(190 172)">
+    <g transform="rotate(-12 145 170)">
+      <circle cx="145" cy="170" r="112" fill="#e36f65"/>
+      <g fill="#ffd0c8">
+        <ellipse cx="145" cy="67" rx="37" ry="61"/>
+        <ellipse cx="234" cy="118" rx="37" ry="61" transform="rotate(60 234 118)"/>
+        <ellipse cx="234" cy="222" rx="37" ry="61" transform="rotate(120 234 222)"/>
+        <ellipse cx="145" cy="273" rx="37" ry="61"/>
+        <ellipse cx="56" cy="222" rx="37" ry="61" transform="rotate(60 56 222)"/>
+        <ellipse cx="56" cy="118" rx="37" ry="61" transform="rotate(120 56 118)"/>
+      </g>
+      <circle cx="145" cy="170" r="45" fill="#e5a93d"/>
+      <g fill="none" stroke="#9b3e45" stroke-width="9" stroke-linecap="round">
+        <path d="M95 118c29-20 70-21 101-1"/>
+        <path d="M80 171c39-26 91-26 130 0"/>
+        <path d="M96 224c31 19 69 19 98 0"/>
+      </g>
+    </g>
+    <g transform="translate(290 52) rotate(14 145 170)">
+      <circle cx="145" cy="170" r="112" fill="#3a9a98"/>
+      <g fill="#caeeea">
+        <ellipse cx="145" cy="67" rx="37" ry="61"/>
+        <ellipse cx="234" cy="118" rx="37" ry="61" transform="rotate(60 234 118)"/>
+        <ellipse cx="234" cy="222" rx="37" ry="61" transform="rotate(120 234 222)"/>
+        <ellipse cx="145" cy="273" rx="37" ry="61"/>
+        <ellipse cx="56" cy="222" rx="37" ry="61" transform="rotate(60 56 222)"/>
+        <ellipse cx="56" cy="118" rx="37" ry="61" transform="rotate(120 56 118)"/>
+      </g>
+      <circle cx="145" cy="170" r="45" fill="#f0be56"/>
+      <g fill="none" stroke="#1f5b62" stroke-width="9" stroke-linecap="round">
+        <path d="M95 118c29-20 70-21 101-1"/>
+        <path d="M80 171c39-26 91-26 130 0"/>
+        <path d="M96 224c31 19 69 19 98 0"/>
+      </g>
+    </g>
+  </g>
+</svg>
