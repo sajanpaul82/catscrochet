@@ -321,8 +321,8 @@ h3 {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
 }
 
 .product-card {
@@ -332,6 +332,13 @@ h3 {
   border-radius: 8px;
   background: #ffffff;
   box-shadow: 0 10px 30px rgba(8, 120, 117, .12);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(8, 120, 117, .18);
 }
 
 .product-card::before {
@@ -361,71 +368,52 @@ h3 {
 }
 
 .product-body {
-  padding: 16px;
+  padding: 8px;
 }
 
 .product-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 12px;
+  gap: 4px;
+  margin-bottom: 6px;
 }
 
 .badge,
 .count-pill {
   display: inline-flex;
   align-items: center;
-  min-height: 28px;
+  min-height: 20px;
   border-radius: 999px;
-  padding: 0 10px;
+  padding: 0 8px;
   color: var(--teal-dark);
   background: var(--teal-soft);
-  font-size: .78rem;
+  font-size: .65rem;
   font-weight: 850;
 }
 
-.badge.sale {
-  color: #fff;
-  background: var(--rose-dark);
-}
-
 .product-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 12px;
-  margin-bottom: 8px;
+  display: grid;
+  gap: 4px;
+  margin-bottom: 0;
 }
 
 .product-title {
   margin: 0;
   line-height: 1.2;
+  font-size: 0.9rem;
 }
 
 .price {
   display: grid;
-  justify-items: end;
-  gap: 2px;
+  gap: 1px;
   font-weight: 900;
   color: var(--rose-dark);
+  font-size: 0.85rem;
 }
 
-.price del {
-  color: var(--muted);
-  font-size: .82rem;
-  font-weight: 700;
-}
-
-.product-body p {
-  min-height: 50px;
-  color: var(--muted);
-  line-height: 1.55;
-  font-size: .94rem;
-}
-
+.product-body p,
 .product-card .button {
-  width: 100%;
-  min-height: 42px;
+  display: none;
 }
 
 .custom {
@@ -600,6 +588,160 @@ textarea {
 .scrim.open {
   pointer-events: auto;
   opacity: 1;
+}
+
+.product-detail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-detail-modal.open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.product-detail-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 58, 61, 0.6);
+  cursor: pointer;
+}
+
+.product-detail-content {
+  position: relative;
+  z-index: 1;
+  width: min(900px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(8, 120, 117, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.close-button:hover {
+  background: #ffffff;
+}
+
+.product-detail-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 32px;
+}
+
+.product-detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-detail-image img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-detail-info {
+  display: grid;
+  gap: 20px;
+}
+
+.product-detail-info h2 {
+  max-width: none;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.detail-price {
+  display: grid;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--rose-dark);
+}
+
+.detail-price .original-price {
+  text-decoration: line-through;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.detail-price .price-main {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.detail-description {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.product-detail-info .button {
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .product-detail-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-detail-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .detail-price .price-main {
+    font-size: 1.4rem;
+  }
 }
 
 .empty {

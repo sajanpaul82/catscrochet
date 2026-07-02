@@ -122,6 +122,28 @@
       </section>
     </main>
 
+    <aside class="product-detail-modal" id="productDetailModal" aria-hidden="true">
+      <div class="product-detail-overlay" id="productDetailOverlay"></div>
+      <div class="product-detail-content">
+        <button class="close-button" type="button" id="closeDetail" aria-label="Close product details">×</button>
+        <div class="product-detail-body">
+          <div class="product-detail-image">
+            <img id="detailImage" src="" alt="Product image">
+          </div>
+          <div class="product-detail-info">
+            <h2 id="detailName"></h2>
+            <div class="detail-badges" id="detailBadges"></div>
+            <div class="detail-price">
+              <span id="detailOriginalPrice" class="original-price"></span>
+              <span id="detailPrice" class="price-main"></span>
+            </div>
+            <p class="detail-description" id="detailDescription"></p>
+            <button class="button primary" type="button" id="detailAddToCart">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
     <aside class="cart-panel" id="cartPanel" aria-label="Shopping bag" aria-hidden="true">
       <div class="cart-header">
         <h2>Your Bag</h2>

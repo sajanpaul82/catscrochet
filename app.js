@@ -2,7 +2,8 @@ let products = loadProducts();
 
 const state = {
   filter: "all",
-  cart: []
+  cart: [],
+  selectedProductId: null
 };
 
 const productGrid = document.querySelector("#productGrid");
@@ -11,6 +12,8 @@ const scrim = document.querySelector("#scrim");
 const cartItems = document.querySelector("#cartItems");
 const cartCount = document.querySelector("#cartCount");
 const cartTotal = document.querySelector("#cartTotal");
+const productDetailModal = document.querySelector("#productDetailModal");
+const productDetailOverlay = document.querySelector("#productDetailOverlay");
 
 function renderProducts() {
   products = loadProducts();
@@ -24,7 +27,7 @@ function renderProducts() {
   }
 
   productGrid.innerHTML = visibleProducts.map((product) => `
-    <article class="product-card">
+    <article class="product-card" data-product-id="${product.id}">
       <img src="${product.image}" alt="${product.name}">
       <div class="product-body">
         <div class="product-badges">
@@ -85,6 +88,43 @@ function closeCart() {
   scrim.classList.remove("open");
 }
 
+function openProductDetail(productId) {
+  const product = products.find((item) => item.id === productId);
+  if (!product) return;
+
+  state.selectedProductId = productId;
+  
+  // Populate modal with product details
+  document.querySelector("#detailImage").src = product.image;
+  document.querySelector("#detailImage").alt = product.name;
+  document.querySelector("#detailName").textContent = product.name;
+  document.querySelector("#detailDescription").textContent = product.description;
+  document.querySelector("#detailPrice").textContent = money(product.price);
+  
+  const originalPriceEl = document.querySelector("#detailOriginalPrice");
+  if (product.originalPrice) {
+    originalPriceEl.textContent = money(product.originalPrice);
+    originalPriceEl.style.display = "block";
+  } else {
+    originalPriceEl.style.display = "none";
+  }
+
+  const detailBadgesEl = document.querySelector("#detailBadges");
+  detailBadgesEl.innerHTML = [
+    product.offer ? `<span class="badge sale">${product.offer}</span>` : "",
+    product.status ? `<span class="badge">${product.status}</span>` : ""
+  ].filter(Boolean).join("");
+
+  productDetailModal.classList.add("open");
+  productDetailModal.setAttribute("aria-hidden", "false");
+}
+
+function closeProductDetail() {
+  productDetailModal.classList.remove("open");
+  productDetailModal.setAttribute("aria-hidden", "true");
+  state.selectedProductId = null;
+}
+
 function draftCheckoutEmail() {
   const selected = state.cart.map((productId) => products.find((product) => product.id === productId));
   const lines = selected.map((product) => `- ${product.name}: ${money(product.price)}`);
@@ -112,13 +152,26 @@ document.querySelectorAll(".filter").forEach((button) => {
   });
 });
 
+// Product tile click - opens detail modal
 productGrid.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-add]");
-  if (!button) return;
-  state.cart.push(button.dataset.add);
+  const tile = event.target.closest("[data-product-id]");
+  if (!tile) return;
+  const productId = tile.dataset.productId;
+  openProductDetail(productId);
+});
+
+// Add to cart from modal
+document.querySelector("#detailAddToCart").addEventListener("click", () => {
+  if (!state.selectedProductId) return;
+  state.cart.push(state.selectedProductId);
   renderCart();
+  closeProductDetail();
   openCart();
 });
+
+// Close modal
+document.querySelector("#closeDetail").addEventListener("click", closeProductDetail);
+productDetailOverlay.addEventListener("click", closeProductDetail);
 
 cartItems.addEventListener("click", (event) => {
   const button = event.target.closest("[data-remove]");
