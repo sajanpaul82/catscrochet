@@ -19,7 +19,7 @@ const DEFAULT_PRODUCTS = [
     price: 3,
     originalPrice: "12",
     category: "amigurumi",
-    image: "assets/honey_bee.jpg",
+    image: "assets/honey_bee.jpgx",
     description: "Honey Bee",
     offer: "Kids Bazar",
     status: "Made on request"
