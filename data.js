@@ -32,7 +32,7 @@ const DEFAULT_PRODUCTS = [
     category: "accessories",
     image: "assets/normal-scrunchie.svg",
     description: "Normal Scrunchie",
-    offer: "Kids Bazar",
+    offer: "Kids Bazar ",
     status: "Made on request"
   },
   {
