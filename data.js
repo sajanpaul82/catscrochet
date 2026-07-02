@@ -14,6 +14,29 @@ const CATEGORY_MIGRATIONS = {
 
 const DEFAULT_PRODUCTS = [
   {
+    id: "bouquet",
+    name: "Bouquet",
+    price: 10,
+    originalPrice: "12",
+    category: "amigurumi",
+    image: "assets/bouquet.jpg",
+    description: "Bouquet",
+    offer: "Kids Bazar",
+    status: "Made on request"
+  },  
+  {
+    id: "cow",
+    name: "Cow",
+    price: 3,
+    originalPrice: "12",
+    category: "amigurumi",
+    image: "assets/cow.jpg",
+    description: "Cow",
+    offer: "Kids Bazar",
+    status: "Made on request"
+  },
+
+  {
     id: "honeybee",
     name: "Honey Bee",
     price: 3,
